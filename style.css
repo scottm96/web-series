@@ -1,20 +1,18 @@
-body{
-    background-color: black;
+@font-face{
+    src: url(fonts/PlaypenSans-VariableFont_wght.ttf);
+    font-family: playpen;
+}
+@font-face {
+    font-family: sofa;
+    src: url(fonts/SofadiOne-Regular.ttf);
 }
 
 h1{
-    color: white;
+    font-family: playpen ;
 }
 
-#p1{
-    color: gainsboro;
-}
-#p3{
-    color: lavender;
-}
-#p2{
-    color: wheat;
-}
-#p4{
-    color: pink;
+p{
+    font-family: sofa;
+    font-size: 1em;
+    font-style: italic;
 }
