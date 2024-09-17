@@ -1,18 +1,13 @@
-@font-face{
-    src: url(fonts/PlaypenSans-VariableFont_wght.ttf);
-    font-family: playpen;
-}
-@font-face {
-    font-family: sofa;
-    src: url(fonts/SofadiOne-Regular.ttf);
-}
-
 h1{
-    font-family: playpen ;
+    border: 3px solid purple;
+    border-radius: 20px ;
 }
 
 p{
-    font-family: sofa;
-    font-size: 1em;
-    font-style: italic;
+    border-bottom: 3px solid hsl(0, 70%, 43%);
+    border-top: 3px solid hsl(46, 82%, 45%);
+    border-left: 3px solid hsl(37, 86%, 47%);
+    border-right: 3px solid green;
+
+    border-radius: 10x;
 }
