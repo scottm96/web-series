@@ -1,10 +1,21 @@
-h1{
-    text-shadow: 3px 3px 5px pink, -3px -3px 5px grey;
+body{
+    margin: 0px;
+}
+
+.box{
+    border: 5px soild;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    
 }
 
 #box1{
-    width: 100px;
-    height: 100px;
-    background-color: blanchedalmond;
-    box-shadow: 3px 3px 5px;
+    background-color: rebeccapurple;
+
+}
+#box2{
+    background-color: tomato;
+    
 }
