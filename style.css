@@ -1,13 +1,10 @@
 h1{
-    border: 3px solid purple;
-    border-radius: 20px ;
+    text-shadow: 3px 3px 5px pink, -3px -3px 5px grey;
 }
 
-p{
-    border-bottom: 3px solid hsl(0, 70%, 43%);
-    border-top: 3px solid hsl(46, 82%, 45%);
-    border-left: 3px solid hsl(37, 86%, 47%);
-    border-right: 3px solid green;
-
-    border-radius: 10x;
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: blanchedalmond;
+    box-shadow: 3px 3px 5px;
 }
