@@ -1,6 +1,21 @@
-div{
-    border: 2px solid;
-    height: 55px;
-    overflow: auto;
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+    position: relative;
     
+    
+
+}
+
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(16, 160, 47);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    
+    
+
 }
