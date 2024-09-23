@@ -1,17 +1,6 @@
-body{
-    border: 3px solid;
-    display: flow-root;
+div{
+    border: 2px solid;
+    height: 55px;
+    overflow: auto;
+    
 }
-#box1{
-    background-color:honeydew;
-    width: 150px;
-    height: 150px;
-    float: left;
-}
-
-#box2{
-    background-color:hsl(321, 93%, 67%);
-    width: 150px;
-    height: 150px;
-    float: right;
-} 
