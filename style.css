@@ -1,8 +1,7 @@
-#container{
-    border: 2px solid;
+li:hover{
+    background-color: honeydew;
 }
 
-#container + p{
-    background-color: yellow;
+li:not(:hover){
+    background-color: orchid;
 }
-
