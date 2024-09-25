@@ -1,27 +1,21 @@
-h1::first-letter{
-    font-size: 2em;
-    font-style: italic;
+.pagination{
+    text-align: center;
 }
 
-p::first-line{
-    background-color: yellowgreen;
+.pagination a{
+    color: blueviolet;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
 }
 
-p::selection{
-    color: white;
-    background-color: teal;
+.pagination a.active{
+    background-color: greenyellow;
+    font-weight: bold;
+    border-radius: 8px;
 }
 
-#fruit li::before{
-    content: "✔"
-}
-
-#apple::after{
-    content: "🍎";
-}
-#pineapple::after{
-    content: "🍍";
-}
-#grape::after{
-    content: " 🍇";
+.pagination a:hover:not(.active){
+    background-color: rgb(209, 248, 235);
+    border-radius: 8px;
 }
