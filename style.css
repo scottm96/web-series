@@ -1,7 +1,27 @@
-li:hover{
-    background-color: honeydew;
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
 }
 
-li:not(:hover){
-    background-color: orchid;
+p::first-line{
+    background-color: yellowgreen;
+}
+
+p::selection{
+    color: white;
+    background-color: teal;
+}
+
+#fruit li::before{
+    content: "✔"
+}
+
+#apple::after{
+    content: "🍎";
+}
+#pineapple::after{
+    content: "🍍";
+}
+#grape::after{
+    content: " 🍇";
 }
