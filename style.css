@@ -1,21 +1,8 @@
-#box1{
-    width: 200px;
-    height: 200px;
-    background-color: burlywood;
-    position: sticky;
-    
-    
-
+#container{
+    border: 2px solid;
 }
 
-#box2{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(16, 160, 47);
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    
-    
-
+#container + p{
+    background-color: yellow;
 }
+
