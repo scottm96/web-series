@@ -1,34 +1,32 @@
-.dropdown{
-    display: inline-block;
+body{
+    margin: 0px;
 }
 
-.dropdown button{
-    background-color: rgb(174, 125, 133);
-    color: antiquewhite;
-    padding: 10px 15px;
-    border: 2px solid;
-    cursor: pointer;
+main{
+    margin: 20px;
 }
 
-.dropdown a{
-    display: block;
-    color: black;
+h1{
+    text-align: center;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: grey;
+    padding: 0px;
+    margin: 0px;
+    overflow:auto;
+}
+
+.navbar a{
+    color: azure;
     text-decoration: none;
-    padding: 10px 15px;
-}
-
-.dropdown .content{
-    display: none;
-    position: absolute;
-    background-color: hsla(163, 11%, 88%, 0.888);
-    min-width: 120px;
-    box-shadow: 2px 2px 5px rgb(155, 210, 204);
-}
-
-.dropdown:hover .content{
+    padding: 15px;
     display: block;
+    text-align: center;
+    float: left;
 }
 
-.dropdown a:hover{
-    background-color: hsla(33, 43%, 41%, 0.616);
+.navbar a:hover{
+    background-color: rgb(174, 166, 166);
 }
