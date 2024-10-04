@@ -1,22 +1,16 @@
-//counter program
+let x = 3.21
+let y = 2;
+let z = 1;
 
-const decrease = document.getElementById("decrease");
-const reset = document.getElementById("reset");
-const increase = document.getElementById("increase");
-const countLabel = document.getElementById("countLabel")
-let count = 0;
+//z = Math.round(x)
+//z = Math.floor(x)
+//z = Math.round(x)
+//z = Math.trunc(x)
+//z = Math.pow(x, y)
+//log(), sqrt(), abs(),
 
-decrease.onclick = function(){
-    count--
-    countLabel.textContent = count
-}
+let max = Math.max(x, y, z)
+let min = Math.min(x, y, z)
 
-reset.onclick = function(){
-    count = 0
-    countLabel.textContent = count
-}
 
-increase.onclick = function(){
-    count++
-    countLabel.textContent = count
-}
+console.log(max)
