@@ -1,19 +1,32 @@
-//random number generator
+//If statements
+
+const input = document.getElementById("age");
+const submit = document.getElementById("submit");
+const result = document.getElementById("result");
 
 
-let roll = document.getElementById("mybutton")
-let label1 = document.getElementById("label1")
-let label2 = document.getElementById("label2")
-let label3 = document.getElementById("label3")
-const min = 1;
-const max = 6;
+submit.onclick = function(){
+    let age = input.value;
+    age = Number(age)
 
-roll.onclick = function(){
-    result1 = Math.floor(Math.random() * max) +1
-    result2 = Math.floor(Math.random() * max) +1
-    result3 = Math.floor(Math.random() * max) +1
-    label1.textContent = result1;
-    label2.textContent = result2;
-    label3.textContent = result3;
+    if (age >= 100){
+        result.textContent = "you are too old to enter this site"
+    }
+    else if (age == 0){
+        result.textContent = "you were just born "
+        
+    }
+    else if (age >= 18){
+        result.textContent = "you are old enough to enter this site"
+        
+    }
+    else if (age < 0){
+        result.textContent = "your age cannot be less than 0"
+        
+    }
+    else{
+        result.textContent = "you're not old enough to enter this site"
+        
+    }
 }
 
