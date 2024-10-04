@@ -1,20 +1,37 @@
-.gallery{
-    display: inline-block;
-    border: 1px solid gray;
-    margin: 5px;
+body{
+    margin: 0;
+}
+
+img{
     width: 200px;
+    height: 200px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    animation-name: fadein;
+    animation-duration: 2s;
+    opacity: 0.8;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
 }
 
-.gallery .description{
-    padding: 10px;
-    text-align: center;
+@keyframes grow{
+    from{transform: scale(2,2);}
 }
 
-.gallery:hover{
-    border: 1px solid rgb(179, 175, 175);
+@keyframes twist {
+    50%{transform: rotateZ(200deg);}
 }
 
-.gallery img{
-    width: 100%;
-    height: auto;
+@keyframes downup {
+    50%{transform: translateY(200%)} 
+}
+
+@keyframes glow {
+    50%{box-shadow: 3px 3px 3px red;}
+}
+
+@keyframes fadein {
+    from{opacity: 0.2;};
+    
 }
