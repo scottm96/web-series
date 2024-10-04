@@ -1,13 +1,10 @@
-/* Accepting user input using the window prompt
-let usernmae;
+//type conversion 
 
-username = window.prompt("What is your username")
+let age = window.prompt("how old are you");
+console.log(typeof age)
 
-console.log(`your username is ${username}`)
+age =Number(age)
+console.log(typeof age)
 
-*/
-let username
-document.getElementById("submit").onclick = function(){
-    username = document.getElementById("mytext").value;
-    document.getElementById("greeting").textContent = `Welcome ${username}`
-}
+let z = '';
+console.log(typeof Boolean(z), Boolean(z))
