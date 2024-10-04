@@ -1,12 +1,13 @@
-let students = 30;
+/* Accepting user input using the window prompt
+let usernmae;
 
-//students =  students / 2;
-//students =  students + 2;
-//students =  students * 2;
-//students =  students - 2;
-//students =  students ** 2;
-//students =  students % 7;
+username = window.prompt("What is your username")
 
-students += 4
+console.log(`your username is ${username}`)
 
-console.log(students)
+*/
+let username
+document.getElementById("submit").onclick = function(){
+    username = document.getElementById("mytext").value;
+    document.getElementById("greeting").textContent = `Welcome ${username}`
+}
