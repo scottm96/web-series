@@ -1,10 +1,14 @@
-//type conversion 
+// constants
 
-let age = window.prompt("how old are you");
-console.log(typeof age)
+const PI = 3.14159
+let radius;
+let circumference;
 
-age =Number(age)
-console.log(typeof age)
 
-let z = '';
-console.log(typeof Boolean(z), Boolean(z))
+
+
+document.getElementById("submit").onclick = function(){
+    radius = document.getElementById("mytext").value;
+    circumference = 2 * PI * radius;
+    document.getElementById("myh3").textContent = circumference + `cm`
+}
