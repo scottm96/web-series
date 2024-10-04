@@ -1,14 +1,22 @@
-// constants
+//counter program
 
-const PI = 3.14159
-let radius;
-let circumference;
+const decrease = document.getElementById("decrease");
+const reset = document.getElementById("reset");
+const increase = document.getElementById("increase");
+const countLabel = document.getElementById("countLabel")
+let count = 0;
 
+decrease.onclick = function(){
+    count--
+    countLabel.textContent = count
+}
 
+reset.onclick = function(){
+    count = 0
+    countLabel.textContent = count
+}
 
-
-document.getElementById("submit").onclick = function(){
-    radius = document.getElementById("mytext").value;
-    circumference = 2 * PI * radius;
-    document.getElementById("myh3").textContent = circumference + `cm`
+increase.onclick = function(){
+    count++
+    countLabel.textContent = count
 }
