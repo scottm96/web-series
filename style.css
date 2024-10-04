@@ -1,23 +1,15 @@
-#countLabel{
-    display: block;
+body{
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    font-size: 8em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
-#buttonContainer{
-    text-align: center;
-}
-
-button{
-    padding: 10px;
-    border: 1px solid black;
-    background-color: rgb(121, 188, 158);
+#mybutton{
+    font-size: 2em;
+    padding: 6px;
     border-radius: 3px;
-    transition: background-color 0.4s;
 }
 
-button:hover{
-    cursor: pointer;
-    background-color: rgb(67, 103, 86);;
+label{
+    font-size: 5em;
 }

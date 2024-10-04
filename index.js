@@ -1,16 +1,19 @@
-let x = 3.21
-let y = 2;
-let z = 1;
-
-//z = Math.round(x)
-//z = Math.floor(x)
-//z = Math.round(x)
-//z = Math.trunc(x)
-//z = Math.pow(x, y)
-//log(), sqrt(), abs(),
-
-let max = Math.max(x, y, z)
-let min = Math.min(x, y, z)
+//random number generator
 
 
-console.log(max)
+let roll = document.getElementById("mybutton")
+let label1 = document.getElementById("label1")
+let label2 = document.getElementById("label2")
+let label3 = document.getElementById("label3")
+const min = 1;
+const max = 6;
+
+roll.onclick = function(){
+    result1 = Math.floor(Math.random() * max) +1
+    result2 = Math.floor(Math.random() * max) +1
+    result3 = Math.floor(Math.random() * max) +1
+    label1.textContent = result1;
+    label2.textContent = result2;
+    label3.textContent = result3;
+}
+
