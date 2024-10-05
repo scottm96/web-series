@@ -1,13 +1,47 @@
-//ternary operator
+//switch, an alternative to if statements
 
-/*let age = 2 ;
+/*
+let day = 'uu' ;
 
-let message = age >= 18 ? "you are an adult" : "you are a minor"
+switch(day){
+    case 1:
+        console.log(`it is Monday`);
+        break;
+    case 2:
+        console.log(`it is Tuesday`);
+        break;
+    case 3:
+        console.log(`it is Wednesday`);
+        break;
+    case 4:
+        console.log(`it is Thursday`);
+        break;
+    case 5:
+        console.log(`it is Friday`);
+        break;
+    default:
+        console.log(`nah bro`)
+}
+        */
 
-console.log(message)*/
 
+let testscore = 92;
+let letterGrade;
 
-let purchaseamnt = 15;
-let discount = purchaseamnt >= 100 ? 10 : 0;
-
-console.log(`Your total is $${purchaseamnt - (purchaseamnt * discount/100)}`)
+switch(true){
+    case testscore >= 90:
+        letterGrade = "A"
+        break;
+    case testscore >= 80:
+        letterGrade = "B"
+        break;
+    case testscore >= 70:
+        letterGrade = "C"
+        break;
+    case testscore >= 60:
+        letterGrade = "D"
+        break;
+    default:
+        letterGrade = "F"
+        break;
+}
