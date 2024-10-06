@@ -1,28 +1,15 @@
-//while loop 
+//for loop - repeat some code for  a certain number of times
 
-//let username = ""
-/*
-while(username === "" || username === null){
-    username = window.prompt("Enter your Name");
+for(let i=10; i > 0; i--){
+    console.log(i);
 }
+console.log("Happy New Year")
 
-console.log(`Hello  ${username}`)
-*/
-
-let loggedIn = false;
-let username;
-let password;
-
-while(!loggedIn){
-    username = window.prompt("Enter your username")
-    password = window.prompt("Enter your password")
-
-    if (username === "user1" && password === "pass0"){
-        loggedIn = true
-        console.log(`Welcome ${username}`)
+for(let i = 1; i <= 20; i++){
+    if (i == 13){
+        break;
     }
     else{
-        console.log("Invalid credentials")
+        console.log(i)
     }
-
 }
