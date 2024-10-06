@@ -1,47 +1,28 @@
-//switch, an alternative to if statements
+//string methods 
 
-/*
-let day = 'uu' ;
+let username = "Max Scott"
 
-switch(day){
-    case 1:
-        console.log(`it is Monday`);
-        break;
-    case 2:
-        console.log(`it is Tuesday`);
-        break;
-    case 3:
-        console.log(`it is Wednesday`);
-        break;
-    case 4:
-        console.log(`it is Thursday`);
-        break;
-    case 5:
-        console.log(`it is Friday`);
-        break;
-    default:
-        console.log(`nah bro`)
-}
-        */
+//console.log (username.charAt(4))
+
+console.log(username.toLocaleLowerCase())
+
+console.log(username.repeat(6))
+
+console.log(username.startsWith("M"))
+
+//theres also endsWith() method
+
+console.log(username.includes("S"))
+
+let phoneNumber = "1244 8592 39320 "
 
 
-let testscore = 92;
-let letterGrade;
+ 
+phoneNumber = phoneNumber.replaceAll(" ", "-")
 
-switch(true){
-    case testscore >= 90:
-        letterGrade = "A"
-        break;
-    case testscore >= 80:
-        letterGrade = "B"
-        break;
-    case testscore >= 70:
-        letterGrade = "C"
-        break;
-    case testscore >= 60:
-        letterGrade = "D"
-        break;
-    default:
-        letterGrade = "F"
-        break;
-}
+console.log (phoneNumber)
+
+console.log(phoneNumber.padStart(23,'x'))
+
+
+
