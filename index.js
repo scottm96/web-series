@@ -1,13 +1,17 @@
-//logical operators
+// strict equality === values and datatype
 
-const temp = 20;
+const PI = 3.14;
 
-if (temp > 0){
-    console.log("The weather is good")
-}
-else if (temp  <= 30){
-    console.log("The weather is good")
+if (PI === "3.14"){
+    console.log("that is pi")
 }
 else{
-    console.log("the weather is bad")
+    console.log("that is not pi")
+}
+
+if (PI !== "3.14"){
+    console.log("that is not pi")
+}
+else{
+    console.log("that is pi")
 }
