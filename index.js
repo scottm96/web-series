@@ -1,25 +1,13 @@
-//method chaining
+//logical operators
 
-//no method chaining
-/*
-let username = window.prompt("Enter your username")
+const temp = 20;
 
-username = username.trim();
-let fl = username.charAt(0);
-fl = fl.toUpperCase()
-
-let extrac = username.slice(1);
-extrac = extrac.toLowerCase()
-username = fl + extrac
-
-console.log(username)
-*/
-
-
-//method chaining
-
-let username = window.prompt("Enter your username")
-
-username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLocaleLowerCase()
-
-console.log(username)
+if (temp > 0){
+    console.log("The weather is good")
+}
+else if (temp  <= 30){
+    console.log("The weather is good")
+}
+else{
+    console.log("the weather is bad")
+}
