@@ -1,19 +1,25 @@
-//string slicing
+//method chaining
 
-const fullName = "Max Scott"
+//no method chaining
+/*
+let username = window.prompt("Enter your username")
 
-let firstName = fullName.slice(0,3)
-console.log(firstName)
+username = username.trim();
+let fl = username.charAt(0);
+fl = fl.toUpperCase()
 
-let lastName = fullName.slice(3)
-console.log (lastName)
+let extrac = username.slice(1);
+extrac = extrac.toLowerCase()
+username = fl + extrac
 
-let fname = fullName.slice(0,fullName.indexOf(" "))
-console.log(fname)
-let lname = fullName.slice(fullName.indexOf(" ") + 1)
-console.log(lname)
+console.log(username)
+*/
 
-const email = "voidstiles5000@gmail.com";
 
-let username = email.slice(0, email.indexOf("@"))
-console.log (username)
+//method chaining
+
+let username = window.prompt("Enter your username")
+
+username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLocaleLowerCase()
+
+console.log(username)
