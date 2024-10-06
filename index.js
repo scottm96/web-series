@@ -1,28 +1,19 @@
-//string methods 
+//string slicing
 
-let username = "Max Scott"
+const fullName = "Max Scott"
 
-//console.log (username.charAt(4))
+let firstName = fullName.slice(0,3)
+console.log(firstName)
 
-console.log(username.toLocaleLowerCase())
+let lastName = fullName.slice(3)
+console.log (lastName)
 
-console.log(username.repeat(6))
+let fname = fullName.slice(0,fullName.indexOf(" "))
+console.log(fname)
+let lname = fullName.slice(fullName.indexOf(" ") + 1)
+console.log(lname)
 
-console.log(username.startsWith("M"))
+const email = "voidstiles5000@gmail.com";
 
-//theres also endsWith() method
-
-console.log(username.includes("S"))
-
-let phoneNumber = "1244 8592 39320 "
-
-
- 
-phoneNumber = phoneNumber.replaceAll(" ", "-")
-
-console.log (phoneNumber)
-
-console.log(phoneNumber.padStart(23,'x'))
-
-
-
+let username = email.slice(0, email.indexOf("@"))
+console.log (username)
