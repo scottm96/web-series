@@ -1,0 +1,54 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    background-color: rgb(199, 190, 190);
+}
+
+h1{
+    color: blueviolet;
+}
+form{
+    
+    background-color: rgb(255, 255, 255);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px, 3px, 3px black;
+}
+
+#textbox{
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+button{
+    margin-top: 5px;
+    background-color: aquamarine;
+    color: black;
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: rgb(45, 113, 90);
+}
+
+#result{
+    font-size: 1.8em;
+    margin: 10px;
+    
+}

@@ -1,52 +1,25 @@
-//function 
-/*
-function happyBirthday(username, age){
-    console.log("Happy birthday Bae")
-    console.log("Happy birthday Bae x2")
-    console.log(`Happy birthday dear ${username}`)
-    console.log("Happy birthday to you")
-    console.log(`you are ${age} years`)
+//temperature conversion 
 
-}
+const textbox = document.getElementById("textbox");
+const tocelcius = document.getElementById("tocelcius");
+const tofarenheit = document.getElementById("tofarenheit");
+const result = document.getElementById("result");
+let temp;
 
-happyBirthday("spongebob", '34');
-*/
+function convert(){
 
-function add(x,y){
-    return x + y
-}
-
-function subtract(x,y){
-    return x - y
-}
-
-function multiply(x,y){
-    return x * y
-}
-
-function isEven(number){
-    if(number % 2 === 0){
-        console.log(`${number} is even`)
+    if(tofarenheit.checked){
+        temp = Number(textbox.value);
+        temp = temp * (9/5) + 32
+        result.textContent = temp.toFixed(1) + ' degree F'
+    }
+    else if(tocelcius.checked){
+        temp = Number(textbox.value);
+        temp = (temp -32) * (9/5) 
+        result.textContent = temp + ' degree C'
     }
     else{
-        console.log(`${number} is not even`)
-
-    }
-
-    return number % 2 === 0 ? "even number" : "odd number"
-}
-
-function invalidemail(email){
-    if(email.includes("@")){
-        console.log("It is a valid email")
-    }
-    else {
-        console.log("It is an  invalid email")
+        result.textContent = "Select a unit of conversion"
     }
 }
 
-isEven(14)
-console.log(isEven(23))
-
-invalidemail("yamchips")
-invalidemail("yamchips@email.com")
