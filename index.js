@@ -1,36 +1,52 @@
-//number guessing game using js
+//function 
+/*
+function happyBirthday(username, age){
+    console.log("Happy birthday Bae")
+    console.log("Happy birthday Bae x2")
+    console.log(`Happy birthday dear ${username}`)
+    console.log("Happy birthday to you")
+    console.log(`you are ${age} years`)
 
-const min = 1;
-const max = 100;
-const answer = Math.floor(Math.random() * (max - min ) + min);
+}
 
-let attempts = 0;
-let guess;
-let running = true;
+happyBirthday("spongebob", '34');
+*/
 
-while (running){
+function add(x,y){
+    return x + y
+}
 
-    guess = window.prompt(`Guess a number between ${min} and ${max}`)
-    guess = Number(guess)
+function subtract(x,y){
+    return x - y
+}
 
-    if(isNaN(guess)){
-        window.alert("please enter a  valid number");
-    }
-    else if(guess < min || guess > max){
-        window.alert("Please enter a valid number");
+function multiply(x,y){
+    return x * y
+}
+
+function isEven(number){
+    if(number % 2 === 0){
+        console.log(`${number} is even`)
     }
     else{
-        attempts++;
-        if(guess < answer){
-            window.alert("Too low, try again")
-        }
-        else if (guess > answer){
-            window.alert("Too high, try again")
-        }
-        else{
-            window.alert(`Correct! it took you ${attempts} attemps`);
-            running = flase
-        }
+        console.log(`${number} is not even`)
+
     }
-    
+
+    return number % 2 === 0 ? "even number" : "odd number"
 }
+
+function invalidemail(email){
+    if(email.includes("@")){
+        console.log("It is a valid email")
+    }
+    else {
+        console.log("It is an  invalid email")
+    }
+}
+
+isEven(14)
+console.log(isEven(23))
+
+invalidemail("yamchips")
+invalidemail("yamchips@email.com")
