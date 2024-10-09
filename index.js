@@ -1,25 +1,31 @@
-//temperature conversion 
+// arrays = variable holding more than one value
 
-const textbox = document.getElementById("textbox");
-const tocelcius = document.getElementById("tocelcius");
-const tofarenheit = document.getElementById("tofarenheit");
-const result = document.getElementById("result");
-let temp;
+let fruits = ['apple', 'orange', 'banana']
 
-function convert(){
 
-    if(tofarenheit.checked){
-        temp = Number(textbox.value);
-        temp = temp * (9/5) + 32
-        result.textContent = temp.toFixed(1) + ' degree F'
-    }
-    else if(tocelcius.checked){
-        temp = Number(textbox.value);
-        temp = (temp -32) * (9/5) 
-        result.textContent = temp + ' degree C'
-    }
-    else{
-        result.textContent = "Select a unit of conversion"
-    }
+//console.log(fruits[2])
+fruits.push('mango');
+fruits.unshift("coconut");
+//fruits.shift();
+numOfFruits = fruits.length
+
+for (i = 0; i < numOfFruits; i++){
+    console.log(fruits[i])
 }
 
+for (let fruit of fruits){
+    console.log(fruit)
+}
+console.log('')
+
+for (let fruit of fruits.sort()){
+    console.log(fruit)
+}
+
+
+
+/*
+fruits.forEach(fruit => {
+    console.log(fruit)
+});
+*/
