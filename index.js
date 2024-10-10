@@ -1,31 +1,44 @@
-// arrays = variable holding more than one value
+// rest parameters = opposite of spread operator but as a function
 
-let fruits = ['apple', 'orange', 'banana']
+const food1 = 'pizza'
+const food2 = 'rice'
+const food3 = 'yam'
 
-
-//console.log(fruits[2])
-fruits.push('mango');
-fruits.unshift("coconut");
-//fruits.shift();
-numOfFruits = fruits.length
-
-for (i = 0; i < numOfFruits; i++){
-    console.log(fruits[i])
+function openfridge(...foods){
+    console.log(foods);
 }
 
-for (let fruit of fruits){
-    console.log(fruit)
+function sum(...numbers){
+    let result = 0;
+    for (let num of numbers){
+        result += num;
+    }
+    return result
 }
-console.log('')
 
-for (let fruit of fruits.sort()){
-    console.log(fruit)
+function getaverage(...numbers){
+    result = 0;
+    for(let num of numbers){
+        result += num
+    }
+    return result/numbers.length;
 }
 
+const total = getaverage(55,23,16,23)
+console.log(total)
 
 
-/*
-fruits.forEach(fruit => {
-    console.log(fruit)
-});
-*/
+function combinestr(...string){
+   /* let chain = ""
+    for(let str of string){
+        chain += str
+    }
+    return chain
+    */
+
+    return string.join("")
+
+}
+
+const fullname = combinestr("max " , "scott ", "devon")
+console.log(fullname)
