@@ -1,44 +1,17 @@
-// rest parameters = opposite of spread operator but as a function
+function rollDice(){
 
-const food1 = 'pizza'
-const food2 = 'rice'
-const food3 = 'yam'
+    const numofdice = document.getElementById("numofdice").value;
+    const diceResult = document.getElementById("diceResult");
+    const diceImages = document.getElementById("diceImages");
+    const values = [];
+    const images = []; 
 
-function openfridge(...foods){
-    console.log(foods);
-}
-
-function sum(...numbers){
-    let result = 0;
-    for (let num of numbers){
-        result += num;
+    for(let i = 0; i < numofdice; i++){
+        const value = Math.floor(Math.random() * 6) + 1;
+        values.push(value);
+        images.push(`<img src="dice_images/${value}.png" alt="dice ${value}">`);
     }
-    return result
+
+    diceResult.textContent = `dice: ${values.join(", ")}`;
+    diceImages.innerHTML = images.join('')
 }
-
-function getaverage(...numbers){
-    result = 0;
-    for(let num of numbers){
-        result += num
-    }
-    return result/numbers.length;
-}
-
-const total = getaverage(55,23,16,23)
-console.log(total)
-
-
-function combinestr(...string){
-   /* let chain = ""
-    for(let str of string){
-        chain += str
-    }
-    return chain
-    */
-
-    return string.join("")
-
-}
-
-const fullname = combinestr("max " , "scott ", "devon")
-console.log(fullname)
