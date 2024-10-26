@@ -1,28 +1,19 @@
-//.filter() = creates new array by filtering out elements
+//.reduce() = reduce te elements of an array to a single value
 
-let numbers = [1, 2, 3, 4, 5, 6, 7];
-let evennum = numbers.filter(isEven)
+const prices = [23, 12, 19, 4, 25]
+const total = prices.reduce(sum);
 
-console.log(evennum)
-function isEven(element){
-    return element % 2 === 0;
+console.log(`total = $${total.toFixed(2)}`)
+
+function sum(previous, next){
+    return previous + next
 }
 
+const grades = [90, 23, 57, 94, 73];
 
-const ages = [16, 17, 20, 18, 54];
-const adult = ages.filter(isadult)
+const max = grades.reduce(getmax)
+console.log(max)
 
-console.log (adult)
-function isadult(element){
-    return element >= 18;
-}
-
-
-const words = ['peanut', 'autopsy', 'yarnball', 'kilsyth', 'telegram']
-const longs = words.filter(getlongwords)
-
-console.log(longs)
-
-function getlongwords(element){
-    return element.length > 6;
+function getmax(accumulator, element){
+    return Math.max(accumulator,element);
 }
