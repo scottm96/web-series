@@ -1,19 +1,21 @@
-//.reduce() = reduce te elements of an array to a single value
+//function expression
 
-const prices = [23, 12, 19, 4, 25]
-const total = prices.reduce(sum);
-
-console.log(`total = $${total.toFixed(2)}`)
-
-function sum(previous, next){
-    return previous + next
+const hello = function(){
+    console.log("hello")
 }
 
-const grades = [90, 23, 57, 94, 73];
+hello()
 
-const max = grades.reduce(getmax)
-console.log(max)
+setTimeout(function(){
+    console.log('hello')
+}, 3000)
 
-function getmax(accumulator, element){
-    return Math.max(accumulator,element);
-}
+const numbers = [1, 2, 3, 4, 5]
+const squares = numbers.map(function(element){
+    return Math.pow(element, 2)
+})
+
+const evennums = numbers.filter(function(element){return element % 2 === 0})
+const total = numbers.reduce(function(accumulator, element){return accumulator + element })
+
+console.log(total);
