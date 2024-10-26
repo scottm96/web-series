@@ -1,21 +1,20 @@
-//function expression
+//arrow funtions 
 
-const hello = function(){
-    console.log("hello")
-}
 
-hello()
 
-setTimeout(function(){
-    console.log('hello')
-}, 3000)
+const hello = (name) => console.log(`hello ${name}`)
 
-const numbers = [1, 2, 3, 4, 5]
-const squares = numbers.map(function(element){
-    return Math.pow(element, 2)
-})
+hello('klee')
 
-const evennums = numbers.filter(function(element){return element % 2 === 0})
-const total = numbers.reduce(function(accumulator, element){return accumulator + element })
 
-console.log(total);
+setTimeout(() => console.log('hello'), 5000)
+
+const numbers = [1, 2, 3, 4, 5, 6]
+const squares = numbers.map((element) => Math.pow(element, 2))
+const total = numbers.reduce((accumulator, element) => accumulator + element)
+const evennum = numbers.filter((element) => element % 2 === 0)
+
+console.log(evennum)
+console.log(squares)
+console.log(total)
+
