@@ -1,31 +1,28 @@
-// .map()
+//.filter() = creates new array by filtering out elements
 
-const numbers = [1, 2, 3, 4, 5];
+let numbers = [1, 2, 3, 4, 5, 6, 7];
+let evennum = numbers.filter(isEven)
 
-const squares = numbers.map(square);
-
-console.log(squares)
-
-function square(element){
-    return Math.pow(element, 2)
-}
-
-const students = ['solar', 'annie', 'parasoul', 'eliza']
-const studentsup = students.map(upper)
-
-console.log(studentsup)
-
-
-function upper(element){
-    return element.toUpperCase();
+console.log(evennum)
+function isEven(element){
+    return element % 2 === 0;
 }
 
 
-const dates = ['2024-1-23', '2003-8-12', '2014-5-28'];
-const formattedDates = dates.map(formatDates)
+const ages = [16, 17, 20, 18, 54];
+const adult = ages.filter(isadult)
 
-console.log(formattedDates)
-function formatDates(element){
-    const parts = element.split('-')
-    return `${parts[1]}/${parts[2]}/${parts[0]}`
+console.log (adult)
+function isadult(element){
+    return element >= 18;
+}
+
+
+const words = ['peanut', 'autopsy', 'yarnball', 'kilsyth', 'telegram']
+const longs = words.filter(getlongwords)
+
+console.log(longs)
+
+function getlongwords(element){
+    return element.length > 6;
 }
