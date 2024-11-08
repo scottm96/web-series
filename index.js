@@ -1,29 +1,33 @@
-class Product{
-    constructor(name, price){
-        this.name = name;
-        this.price = price;
+ // static keyword
+
+ class User{
+    static userCount = 0;
+    static users = []
+
+    constructor(username){
+        this.username = username;
+        User.users.push(username);
+        User.userCount++
     }
 
-    displayProduct(){
-        console.log(`product: ${this.name}`);
-        console.log(`price: ${this.price.toFixed(2)}`);
+    sayhello (){
+        console.log(`hey, my username is ${this.username}`)
     }
 
-    calculatetotal(tax){
-        return this.price + (this.price * tax)
+    static getusercount(){
+        console.log(`there are ${User.userCount} users online` )
     }
-}
+ }
 
+ const user1 = new User('killua');
+ const user2 = new User('pito');
+ const user3 = new User('mixy');
+ const user4 = new User('lily');
+ const user5 = new User('zanpacuto');
 
+ user2.sayhello()
 
-const product1 = new Product('playstation 5', 599.99)
-const product2 = new Product('gaystation 5', 29.99)
-const product3 = new Product('gimball', 199.99)
+ console.log(User.userCount)
+ console.log(User.users)
 
-product1.displayProduct();
-const total1 = product1.calculatetotal(0.44);
-product2.displayProduct();
-const total2 = product2.calculatetotal(0.44);
-console.log("")
-
-console.log(`total price for these products (tax each): $${(total1 + total2).toFixed(2)}`)
+ User.getusercount();
