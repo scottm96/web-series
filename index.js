@@ -1,22 +1,16 @@
-const person = {
-    'first name' : 'nigga',
-    'last name' : 'X',
-    age : 31,
-    sayHello : () => console.log('yo nigga x'),
-    displayProfile : () => console.log(Object.entries(person))
+function car(make, model, year, color){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color
+    this.drive = function(){console.log(`you drive a ${this.model}`)}
 }
 
-const personx = {
-    name: 'spongebob',
-    sayHi : function() {console.log(`hi, i am ${this.name}`)},
-}
+const car1 = new car('ford', 'mustang', 2024, 'red');
+const car2 = new car('porche', 'cayenne', 2022, 'black');
+const car3 = new car('audi', 'a4', 2023, 'pink');
+const car4 = new car('honda', 'crv', 2020, 'white');
 
-personx.sayHi();
-
-const persony = {
-    name: 'patrick',
-    favfood: 'pizza',
-    eat: function() {console.log(`${this.name} is eating ${this.favfood}`)},
-}
-
-persony.eat()
+car4.drive();
+car2.drive();
+car1.drive();
