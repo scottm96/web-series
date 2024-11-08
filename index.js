@@ -1,10 +1,22 @@
-//objects
-
 const person = {
-    firstName : "Mark",
-    lastName : 'Scout', 
-    age : 25,
-    isEmployed : true,
+    'first name' : 'nigga',
+    'last name' : 'X',
+    age : 31,
+    sayHello : () => console.log('yo nigga x'),
+    displayProfile : () => console.log(Object.entries(person))
 }
 
-console.log(person.firstName)
+const personx = {
+    name: 'spongebob',
+    sayHi : function() {console.log(`hi, i am ${this.name}`)},
+}
+
+personx.sayHi();
+
+const persony = {
+    name: 'patrick',
+    favfood: 'pizza',
+    eat: function() {console.log(`${this.name} is eating ${this.favfood}`)},
+}
+
+persony.eat()
