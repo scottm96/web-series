@@ -1,33 +1,37 @@
- // static keyword
+//inheritance
 
- class User{
-    static userCount = 0;
-    static users = []
+class Animal{
+    alive = true;
 
-    constructor(username){
-        this.username = username;
-        User.users.push(username);
-        User.userCount++
+    eat(){
+        console.log(`This ${this.name} is eating`)
     }
 
-    sayhello (){
-        console.log(`hey, my username is ${this.username}`)
+    sleep(){
+        console.log(`This ${this.name} is sleeping`)
     }
+}
 
-    static getusercount(){
-        console.log(`there are ${User.userCount} users online` )
+class Rabbit extends Animal{
+    name = 'rabbit';
+    run(){
+        console.log(`This ${this.name}  is running`)
     }
- }
+}
+class Fish extends Animal{
+    name = 'fish';
+    swim(){
+        console.log(`This ${this.name}  is swimming`)
+    }
+}
+class Hawk extends Animal{
+    name = 'rabbit';
+    fly(){
+        console.log(`This ${this.name}  is flying`)
+    }
+}
 
- const user1 = new User('killua');
- const user2 = new User('pito');
- const user3 = new User('mixy');
- const user4 = new User('lily');
- const user5 = new User('zanpacuto');
 
- user2.sayhello()
+const rabbit = new Rabbit();
 
- console.log(User.userCount)
- console.log(User.users)
-
- User.getusercount();
+rabbit.sleep()
