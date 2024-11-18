@@ -1,26 +1,7 @@
-class Person{
+//sort
 
-    constructor(name, age, ...address ){
-        this.name = name;
-        this.age = age;
-        this.address = new Address(...address);
-    }
-}
+let numbers = [1, 10, 2, 9, 3, 8, 4, 7, 5, 6];
 
+numbers.sort((a,b) => a - b);
 
-
-
-class Address{
-
-    constructor(street, city, country){
-        this.street = street;
-        this.city = city;
-        this.country = country;
-    }
-}
-
-const person1 = new Person('spongebob', 23, '124 yele lane',
-                                             'mamprobi', 
-                                             'greece')
-
-console.log(person1.address.street)
+console.log(numbers);
