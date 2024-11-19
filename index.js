@@ -1,7 +1,18 @@
-//sort
+//fisher-yates algorithm for shufing in js
 
-let numbers = [1, 10, 2, 9, 3, 8, 4, 7, 5, 6];
+const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 'J', 'Q', 'K']
 
-numbers.sort((a,b) => a - b);
+shuffle(cards)
 
-console.log(numbers);
+console.log(cards)
+
+
+
+function shuffle(array){
+    for(let i = array.length - 1; i > 0; i--){
+        const random = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[random]] = [array[random], array[i]];
+    }
+
+}
