@@ -1,18 +1,10 @@
-//fisher-yates algorithm for shufing in js
+const date = new Date()
 
-const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 'J', 'Q', 'K']
+const year = date.getFullYear()
 
-shuffle(cards)
+console.log(year)
 
-console.log(cards)
+const date1 = new Date('2023-12-31');
+const date2 = new Date('2024-01-011');
 
-
-
-function shuffle(array){
-    for(let i = array.length - 1; i > 0; i--){
-        const random = Math.floor(Math.random() * (i + 1));
-
-        [array[i], array[random]] = [array[random], array[i]];
-    }
-
-}
+date2 > date1 ? console.log('happy new year') : console.log('sia')
