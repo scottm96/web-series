@@ -1,70 +1,15 @@
-//closure 
+//setTimeout
 
-function outer(){
 
-    let message = 'hello';
+let timeoutID;
 
-    function inner(){
-        console.log(message)
-    }
+
+function startRepeat(){
+   timeoutID = setInterval(() => window.alert(), 3000)
+   console.log('started')
 }
 
-
-function counter(){
-
-    let count = 0;
-
-
-    function increment(){
-       
-        count++;
-        console.log(`count is increased to ${count}`)
-    }
-
-    function getcount(){
-        return count;
-
-    }
-
-    return {increment, getcount}
+function endRepeat(){
+    clearInterval(timeoutID)
+    console.log('stopped')
 }
-
-const counters = counter();
-
-counters.increment();
-counters.increment();
-counters.increment();
-counters.increment();
-counters.increment();
-
-
-
-
-function createGame(){
-
-    let score = 0;
-
-    function increaseScore(points){
-        score += points;
-        console.log(`+${points}pts`)
-    }
-
-    function decreaseScore(points){
-        score -= points;
-        console.log(`-${points}pts`)
-    }
-
-    function getScore(){
-        return score;
-    }
-
-    return {increaseScore, decreaseScore, getScore}
-}
-
-const game = createGame();
-
-game.increaseScore(8);
-game.increaseScore(8);
-game.increaseScore(8);
-
-console.log(game.getScore())
