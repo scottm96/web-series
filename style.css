@@ -1,40 +1,26 @@
-#container {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body{
+    margin: 0;
+    background-image: url(car.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 3.5rem;
+    font-weight: bold;
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-button{
-    font-size: 1.5em;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: none;
-    background-color: lime;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: rgb(5, 137, 5);
-}
-
-button:active{
-    background-color: rgb(167, 233, 167);
-}
-
-input{
-    font-size: 2rem;
-    width: 150px;
-    text-align: center;
-    font-weight: bold;
-}
-#diceImages{
-    max-width: 500px;
-    margin: auto;
-}
-#diceImages img{
-    width: 45px;
-    height: auto;
-    margin: 10px
+    color: rgb(215, 215, 218);
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 0%, 100%, 0.1);
+    width: 100%;
 }

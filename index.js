@@ -1,15 +1,21 @@
-//setTimeout
+//digital clock
+
+function updateClock(){
 
 
-let timeoutID;
+    const now = new Date();
+    let hours = now.getHours();
+    const meridian = hours >= 12 ? 'pm' : 'am';
+    hours = hours
+    hours = hours % 12 || 12;
+    hours  = hours.toString().padStart(2, 0);
+    const minutes = now.getMinutes().toString().padStart(2, 0);
+    const seconds = now.getSeconds().toString().padStart(2, 0);
+    const timeString = `${hours}:${minutes}:${seconds} ${meridian}`;
+    document.getElementById("clock").textContent = timeString;
+    
 
-
-function startRepeat(){
-   timeoutID = setInterval(() => window.alert(), 3000)
-   console.log('started')
 }
 
-function endRepeat(){
-    clearInterval(timeoutID)
-    console.log('stopped')
-}
+ 
+setInterval(updateClock,1000);
