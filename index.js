@@ -1,49 +1,13 @@
-//stopwatch
+import {PI, getArea, getCircumference, getVolume} from './mathUtils.js';
 
-const display = document.getElementById('display');
-let timer = null;
-let startTime = 0;
-let elapsedTime = 0;
-let isRunning = false;
+console.log(PI);
 
-function start(){
-
-    if(!isRunning){
-        startTime = Date.now() - elapsedTime;
-        timer = setInterval(update, 10)
-        isRunning = true;   
-    }
-}
-
-function stop(){
-    if(isRunning){
-        clearInterval(timer);
-        elapsedTime = Date.now() - startTime;
-        isRunning = false
-    }
-}
-
-function reset(){
-    clearInterval(timer);
-    startTime = 0;
-    elapsedTime = 0;
-    isRunning = false;
-    display.textContent = `00:00:00:00`
-}
+const circumference = getCircumference(10);
+const area = getArea(10);
+const volume = getVolume(10)
 
 
-function update(){
 
-    const currentTime = Date.now();
-    elapsedTime = currentTime - startTime;
-
-    let hours = Math.floor(elapsedTime / (1000 * 60 * 60)).toString().padStart(2, '0');
-    let minutes = Math.floor(elapsedTime/(1000 * 60) % 60).toString().padStart(2, '0');
-    let seconds = Math.floor(elapsedTime/(1000)).toString().padStart(2, 0);
-    let milliseconds = Math.floor(elapsedTime % 1000 / 10);
-
-    display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`
-
-}
-
-
+console.log(`${circumference.toFixed(2)}cm`)
+console.log(`${area.toFixed(2)}cm^2`)
+console.log(`${volume.toFixed(2)}cm^3`)
