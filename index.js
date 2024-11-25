@@ -1,21 +1,49 @@
-//digital clock
+//stopwatch
 
-function updateClock(){
+const display = document.getElementById('display');
+let timer = null;
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+
+function start(){
+
+    if(!isRunning){
+        startTime = Date.now() - elapsedTime;
+        timer = setInterval(update, 10)
+        isRunning = true;   
+    }
+}
+
+function stop(){
+    if(isRunning){
+        clearInterval(timer);
+        elapsedTime = Date.now() - startTime;
+        isRunning = false
+    }
+}
+
+function reset(){
+    clearInterval(timer);
+    startTime = 0;
+    elapsedTime = 0;
+    isRunning = false;
+    display.textContent = `00:00:00:00`
+}
 
 
-    const now = new Date();
-    let hours = now.getHours();
-    const meridian = hours >= 12 ? 'pm' : 'am';
-    hours = hours
-    hours = hours % 12 || 12;
-    hours  = hours.toString().padStart(2, 0);
-    const minutes = now.getMinutes().toString().padStart(2, 0);
-    const seconds = now.getSeconds().toString().padStart(2, 0);
-    const timeString = `${hours}:${minutes}:${seconds} ${meridian}`;
-    document.getElementById("clock").textContent = timeString;
-    
+function update(){
+
+    const currentTime = Date.now();
+    elapsedTime = currentTime - startTime;
+
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60)).toString().padStart(2, '0');
+    let minutes = Math.floor(elapsedTime/(1000 * 60) % 60).toString().padStart(2, '0');
+    let seconds = Math.floor(elapsedTime/(1000)).toString().padStart(2, 0);
+    let milliseconds = Math.floor(elapsedTime % 1000 / 10);
+
+    display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`
 
 }
 
- 
-setInterval(updateClock,1000);
+
