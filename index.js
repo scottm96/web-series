@@ -1,26 +1,16 @@
-//calculator application
+//create the element
+//add attributes and properties
+//append elemets to DOM
 
-const display = document.getElementById('display')
-display.value = '0'
+const newListitem = document.createElement('li')
 
-function appendToDisplay(input){
-    if(display.value == '0'){
-        display.value = input;
-    }
-    else{
-        display.value += input;
-    }
-}
+newListitem.textContent = 'coconut';
+newListitem.id = 'coconut';
+newListitem.style.fontWeight = 'bold';
+newListitem.style.backgroundColor = 'teal';
 
-function clearDisplay(){
-    display.value = '';
-}
+//const orange = document.getElementById("banana")
+//document.getElementById('fruits').insertBefore(newListitem, orange)
 
-function calculate(){
-    try{
-        display.value = eval(display.value)
-    }
-    catch(error){
-        display.value = "error"
-    }
-}
+const listItems = document.querySelectorAll('#fruits li');
+document.getElementById('fruits').insertBefore(newListitem, listItems[3])
