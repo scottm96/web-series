@@ -1,16 +1,20 @@
-//create the element
-//add attributes and properties
-//append elemets to DOM
+const mybox = document.getElementById('mybox');
 
-const newListitem = document.createElement('li')
+function changeColor(event){
+    
+}
 
-newListitem.textContent = 'coconut';
-newListitem.id = 'coconut';
-newListitem.style.fontWeight = 'bold';
-newListitem.style.backgroundColor = 'teal';
+mybox.addEventListener("click", event => {
+    event.target.style.backgroundColor = 'teal';
+    event.target.textContent = "that's ticklish 😊";
+});
 
-//const orange = document.getElementById("banana")
-//document.getElementById('fruits').insertBefore(newListitem, orange)
+mybox.addEventListener("mouseover", event => {
+    event.target.style.backgroundColor = 'pink';
+    event.target.textContent = "please don't 😆";
+})
 
-const listItems = document.querySelectorAll('#fruits li');
-document.getElementById('fruits').insertBefore(newListitem, listItems[3])
+mybox.addEventListener("mouseout", event => {
+    event.target.style.backgroundColor = 'lightcoral';
+    event.target.textContent = "Click Me 🤪";
+})
