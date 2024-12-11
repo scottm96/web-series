@@ -1,11 +1,14 @@
 #mybox{
-    background-color: lightcoral;
+    background-color: rgb(135, 227, 73);
     width: 300px;
     height: 300px;
-    font-size: 4.5rem;
+    font-size: 6rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     font-weight: bold;
     cursor: pointer;
+    position: relative;
+    margin: 0;
 }
