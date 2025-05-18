@@ -1,27 +1,35 @@
-//callback hell
+//promises
 
-function task1(callback){
-    setTimeout( ()=> {console.log("task 1 is complete")
-        callback()
-    }, 3000)
-}
+function walkDog(){
 
-function task2(callback){
-    setTimeout( ()=> {console.log("task 2 is complete")
-        callback()
-    }, 2000)
-}
 
-function task3(callback){
-    setTimeout( ()=> {console.log("task 3 is complete")
-        callback()
-    }, 1000)
-}
-
-task1(()=>{
-    task2(()=>{
-        task3(()=>{
-            task1()
-        })
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("You walk the Dog")
+        }, 2000);
     })
-})
+}
+
+function cleanKitchen(){
+    
+
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            resolve("You clean the kitchen")
+        }, 3000);
+    })
+}
+
+function takeOutTrash(){
+
+
+    return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("You take out the trash")
+    }, 1000);
+    })
+}
+
+walkDog().then((value) => {console.log(value); return cleanKitchen()})
+         .then((value) => {console.log(value); return takeOutTrash()})
+         .then((value) => {console.log(value); console.log("you completed all the chores")})
