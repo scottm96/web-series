@@ -9,10 +9,10 @@ function walkDog(){
             const dogWalked = true
 
             if(dogWalked){
-                resolve("You walk the Dog")
+                resolve("You walked the Dog")
             }
             else{
-                reject("You did not wal the dog")
+                reject("You did not walk the dog")
             }
         }, 2000);
     })
@@ -27,7 +27,7 @@ function cleanKitchen(){
             const kitchenCleaned  = false
 
             if(kitchenCleaned){
-                resolve("You clean the kitchen")
+                resolve("You cleaned the kitchen")
             }
             else{
                 reject("You did not clean the kitchen")
@@ -46,7 +46,7 @@ function takeOutTrash(){
             const trashTakenOut = true;
 
             if(trashTakenOut){
-                resolve("You did not take out the trash")
+                resolve("You took out the trash")
             }
             else{
                 reject("You did not take out the trash")
