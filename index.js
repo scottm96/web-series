@@ -56,7 +56,23 @@ function takeOutTrash(){
     })
 }
 
-walkDog().then((value) => {console.log(value); return cleanKitchen()})
-         .then((value) => {console.log(value); return takeOutTrash()})
-         .then((value) => {console.log(value); console.log("you completed all the chores")})
-         .catch((error) => console.error(error))
+async function doChores(){
+
+    try{
+        const walkDogResult = await walkDog();
+        console.log(walkDogResult)
+
+        const cleanKitchenResult = await cleanKitchen();
+        console.log(cleanKitchenResult)
+
+        const takeOutTrashResult = await takeOutTrash();
+        console.log(takeOutTrashResult)
+    } 
+    catch(error){
+        console.error(error)
+    }
+    
+}
+
+
+doChores();
