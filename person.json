@@ -1,0 +1,6 @@
+[{
+    "name" : "squidward",
+    "age" : 36,
+    "isEmployed" : true,
+    "hobbies" : ["music", "hating", "sleeping"]
+}]

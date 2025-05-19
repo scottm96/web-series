@@ -1,0 +1,15 @@
+[{
+    "name" : "squidward",
+    "age" : 36,
+    "isEmployed" : true
+},
+{
+    "name" : "patrick",
+    "age" : 29,
+    "isEmployed" : false
+},
+{
+    "name" : "king",
+    "age" : 36,
+    "isEmployed" : true
+}]

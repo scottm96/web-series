@@ -1,79 +1,34 @@
-/*async/await - async allows asynchronous code to work in a synchronous manner
-                await makes an async function await a promise*/
+//JS Object Notation stringify and parse
 
-function walkDog(){
+const names = ["squidward", "king", "chuck", "patrick"]
 
+const jsonString = JSON.stringify(names)
 
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-
-            const dogWalked = true
-
-            if(dogWalked){
-                resolve("You walked the Dog")
-            }
-            else{
-                reject("You did not walk the dog")
-            }
-        }, 2000);
-    })
-}
-
-function cleanKitchen(){
-    
-
-    return new Promise((resolve, reject) =>{
-        setTimeout(() => {
-            
-            const kitchenCleaned  = false
-
-            if(kitchenCleaned){
-                resolve("You cleaned the kitchen")
-            }
-            else{
-                reject("You did not clean the kitchen")
-            }
-            
-        }, 3000);
-    })
-}
-
-function takeOutTrash(){
+console.log(jsonString)
 
 
-    return new Promise((resolve, reject) => {
 
-        setTimeout(() => {
-            const trashTakenOut = true;
+const people = [{
+    "name" : "squidward",
+    "age" : 36,
+    "isEmployed" : true
+},
+{
+    "name" : "patrick",
+    "age" : 29,
+    "isEmployed" : false
+},
+{
+    "name" : "king",
+    "age" : 36,
+    "isEmployed" : true
+}]
 
-            if(trashTakenOut){
-                resolve("You took out the trash")
-            }
-            else{
-                reject("You did not take out the trash")
-            }
-        }, 1000);
-        
-    })
-}
+const jsonPeople = JSON.stringify(people)
 
-async function doChores(){
-
-    try{
-        const walkDogResult = await walkDog();
-        console.log(walkDogResult)
-
-        const cleanKitchenResult = await cleanKitchen();
-        console.log(cleanKitchenResult)
-
-        const takeOutTrashResult = await takeOutTrash();
-        console.log(takeOutTrashResult)
-    } 
-    catch(error){
-        console.error(error)
-    }
-    
-}
+console.log(jsonPeople)
+console.log(typeof(jsonPeople))
 
 
-doChores();
+console.log(JSON.parse(jsonPeople))
+console.log(typeof(JSON.parse(jsonPeople)))
