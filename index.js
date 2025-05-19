@@ -1,4 +1,5 @@
-//promises
+/*async/await - async allows asynchronous code to work in a synchronous manner
+                await makes an async function await a promise*/
 
 function walkDog(){
 
