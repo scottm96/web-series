@@ -2,15 +2,24 @@
 //  used to interact with api
 //fetch(url,{options})
 
-fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-    .then(response => {
+async function fetchData() {
+
+    try{
+
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon/gengar")
 
         if(!response.ok){
-            throw new Error("could not retrieve data")
+            throw new Error("cannot retrieve data")
         }
 
-        return response.json()
+        const data = await response.json()
+        console.log(data)
 
-    })
-    .then(data => console.log(data.abilities[1].ability['name']))
-    .catch(error => console.error(error))
+    }
+    catch(e){
+        console.log(e)
+    }
+    
+}
+
+fetchData()
