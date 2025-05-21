@@ -1,7 +1,16 @@
-//JS Object Notation stringify and parse
+//fetch  used to make http request to fetch resource
+//  used to interact with api
+//fetch(url,{options})
 
+fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+    .then(response => {
 
-fetch("people.json")
-    .then( (response) => response.json())
-    .then( (values) => values.forEach(value => {console.log(value)}))
-    .catch( (error) => console.error(errors))
+        if(!response.ok){
+            throw new Error("could not retrieve data")
+        }
+
+        return response.json()
+
+    })
+    .then(data => console.log(data.abilities[1].ability['name']))
+    .catch(error => console.error(error))
